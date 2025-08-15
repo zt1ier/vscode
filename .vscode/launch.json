@@ -2,8 +2,8 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Run C++ (no debugger)",
-            "type": "cppvsdbg",  // Windows native launcher, no GDB spam
+            "name": "Run C++ without debugger",
+            "type": "cppvsdbg",
             "request": "launch",
             "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
             "args": [],
