@@ -2,6 +2,7 @@
 #include <vector>
 #include <conio.h>
 #include <cctype>
+#include <cstdlib>
 
 
 char playerIcon = 'P';
@@ -28,17 +29,20 @@ int main() {
         "###############"
     };
 
-
     // player starting position (column 1, row 1)
-    Position playerPos = {1, 1};
+    position playerPos = {1, 1};
 
     bool running = true; // game loop control flag
     char lastKey = ' ';  // store last pressed key
 
     while (running) {
+        // a command that essentially "refreshes" the console
+        // I asked ChatGPT for this idk about any other way to clear console well
+        std::cout << "\033[2J\033[1;1H";
+
         // make copy of map so we can place the player
         // this way we don’t overwrite original map data
-        auto displayMap = map;
+        std::vector<std::string> displayMap = map;
 
         // put player character on map copy
         displayMap[playerPos.y][playerPos.x] = playerIcon;
@@ -65,6 +69,7 @@ int main() {
         else if (input == 'A') newX--;          // move left
         else if (input == 'D') newX++;          // move right
         else if (input == 'Q') {
+            std::cout << "Pressed '" << lastKey << "' key\n";
             std::cout << "Exited";
             running = false; // quit game
         } 
