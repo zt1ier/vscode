@@ -4,7 +4,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Run C++ without debugger",
+            "name": "Run C++",
             "type": "cppvsdbg",
             "request": "launch",
             "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
