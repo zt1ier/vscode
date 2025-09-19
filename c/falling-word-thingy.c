@@ -37,33 +37,34 @@ int main() {
     };
 
 
+    // OT names idk
     char *words[] = {
-        "Acts",
-        "Bible",
-        "Corinthians",
-        "Deutoronomy",
-        "Ephesians",
+        "Abraham",
+        "Bathsheba",
+        "Canaan",
+        "David",
+        "E",
         "F",
-        "Galatians",
-        "Hebrews",
-        "Isaiah",
-        "Jesus",
+        "G",
+        "Hagar",
+        "Israel",
+        "Joshua",
         "K",
-        "Luke",
-        "Matthew",
-        "Nahum",
+        "L",
+        "Moses",
+        "Nahor",
         "O",
-        "Philippians",
+        "P",
         "Q",
-        "Revelation",
-        "Sarai",
+        "Rachel",
+        "Solomon",
         "Thomas",
         "U",
         "V",
         "W",
         "X",
         "Yahweh",
-        "Z",
+        "Zebulun",
 
     };
 
@@ -72,8 +73,7 @@ int main() {
     int currentRow = 1;
     char guess[100];
 
-    // using gridSize doen't work
-    // because it's a runtime constant :(
+    // using gridSize doesn't work because it's a runtime constant :( but it works on other compilers?
     char *grid[sizeof(gameGrid) / sizeof(gameGrid[0])] = {};
 
     // duplicate grid, we'll use the copy
